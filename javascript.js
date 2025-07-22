@@ -1,6 +1,48 @@
-let number 
-let operator
-let anotherNumber
+let number = document.querySelectorAll(".number")
+let removeAll = document.querySelector(".clr")
+let operator = document.querySelectorAll(".symbl")
+let print = document.getElementById("display")
+
+
+
+
+number.forEach((item)=>{
+        // textContent and innerHTML won't work
+        // because Sometimes .textContent includes newline or spaces to solve this use .trim() like item.innerHTML.trim() to remove the spaces
+        let arr = print.innerText.split("")
+       if (item.innerText === "x²"){
+        item.addEventListener("click",(e)=>{
+            let dis = print.innerText
+            print.innerText = Math.pow(dis,2)
+        })
+    } else if (item.innerText === "."){
+      item.addEventListener("click",(e)=>{
+        let box = print.innerText.split("")
+        if (box.includes(".")){
+            return false 
+        } else {
+               let store = item.innerText
+                print.innerText += store
+        }
+      })
+    }else {        
+        // console.log(item)
+        item.addEventListener("click",(e)=>{
+          let store = e.target.textContent
+          print.textContent += store.trim()
+        })
+    }
+
+   
+    })
+
+
+
+    removeAll.addEventListener("click",()=>{
+        print.textContent = ""
+    })
+
+
 
 function add(a,b){
     return a+b
@@ -40,3 +82,5 @@ function operate(){
        
     }
 }
+
+
