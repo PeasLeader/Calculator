@@ -7,38 +7,42 @@
 
 .container{
     height: 400px;
-    width: 900px;
+    width: 520px;
     background-color: #2C2C2B;
     margin: 0 auto;
     border: 3px solid #DC143C ;
     border-radius: 10px;
 }
 
-.display{
+#display{
     margin-top: 10px;
     margin-left: 10px;
-    height: 55px;
+    box-sizing: border-box;
+    height: 60px;
     width: 500px;
-    background-color: 	#00FFFF ;
+    background-color: #00FFFF ;
     border-radius: 5px;
+    font-size: 40px;
+    font-weight: 200px;
+    overflow: auto
 }
 
 
 .btn{
-    margin-top: 20px;
+    margin-top: 6px;
     margin-left: 10px;
 }
 
 .clr{
     height: 30px;
     width: 200px;
-    /* border-radius: 0px; */
+    border-radius: 0px;
 }
 
 .dlt{
     height: 30px;
     width: 300px;
-    /* border-radius: 0px; */
+    border-radius: 0px;
 }
 
 .num{
@@ -53,13 +57,19 @@
 .number{
     width: 130px;
     height: 50px;
-    /* border-radius: 0px; */
+    border-radius: 0px;
 }
 
 .symbl{
     flex: 1;
     width: 100px;
-    /* border-radius: 0px; */
+    border-radius: 0px;
+}
+
+.result{
+     flex: 1;
+    width: 100px;
+    border-radius: 0px;
 }
 
 .total{
@@ -72,3 +82,24 @@
     margin-top: 5px;
     gap: 2px;
 }
+
+.thisPlay{
+display: flex;
+   
+}
+
+.history{
+    margin-left: 30px;
+    margin-top: 10px;
+    height: 350px;
+    width: 320px;
+    background-color: #D4AF37;
+    overflow: auto;
+    display: none;
+}
+
+.word{
+    font-size: 20px;
+    
+}
+
